@@ -100,3 +100,8 @@ For further details, please study the [joshkatz/r-script](https://github.com/jos
 
 This project was generated from the [seneca-plugin-archetype](https://github.com/tombenke/seneca-plugin-archetype)
 by the [kickoff](https://github.com/tombenke/kickoff) utility.
+
+[npm-badge]: https://badge.fury.io/js/seneca-r-script.svg
+[npm-url]: https://badge.fury.io/js/seneca-r-script
+[travis-badge]: https://api.travis-ci.org/tombenke/seneca-r-script.svg
+[travis-url]: https://travis-ci.org/tombenke/seneca-r-script
