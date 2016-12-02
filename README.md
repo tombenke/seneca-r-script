@@ -48,7 +48,7 @@ For example this is an asynchronous call to an R script which echoes back the wh
         }
     })
  
-and this is a synchronous one:
+and this is an example for a synchronous call:
 
     const dataToSend = { text: 'some text...', num: 12345, logic: true }
     seneca.act('role: seneca-r-script, cmd: call, path: echo.spec.R', { data: dataToSend }, function(err, data) {
