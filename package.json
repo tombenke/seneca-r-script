@@ -1,0 +1,48 @@
+{
+  "name": "seneca-r-script",
+  "description": "A seneca plugin to run R scripts as child processes",
+  "version": "1.0.0",
+  "tags": [
+    "seneca",
+    "plugin",
+    "micro-services"
+  ],
+  "main": "lib/index.js",
+  "author": {
+    "name": "Tamás Benke",
+    "email": "tombenke@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/tombenke/seneca-r-script/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/tombenke/seneca-r-script",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tombenke/seneca-r-script.git"
+  },
+  "engines": {
+    "node": "^4.0.0"
+  },
+  "dependencies": {
+    "r-script": "0.0.3",
+    "seneca": "^3.x.x"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.2",
+    "chai": "^3.5.0",
+    "cross-env": "^2.x.x",
+    "mocha": "^2.x.x",
+    "istanbul": "1.0.0-alpha.2"
+  },
+  "scripts": {
+    "lint": "eslint lib/**.js",
+    "test": "cross-env NODE_ENV=test mocha --recursive 'lib/**/*.spec.js'",
+    "test:watch": "npm test -- --watch",
+    "coverage": "NODE_ENV=test istanbul cover _mocha -- recursive --timeout 15000 'lib/**/*.spec.js'"
+  },
+  "pre-push": [
+    "lint",
+    "test"
+  ]
+}
