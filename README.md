@@ -2,6 +2,9 @@
 
 A seneca plugin to run R scripts as child processes.
 
+[![npm version][npm-badge]][npm-url]
+[![Build Status][travis-badge]][travis-url]
+
 The plugin is a simple wrapper of the [joshkatz/r-script](https://github.com/joshkatz/r-script) module.
 
 Data passed from this plugin is converted into a list and sent to the R script throught the environment.
