@@ -37,7 +37,7 @@
   },
   "scripts": {
     "lint": "eslint lib/**.js",
-    "test": "cross-env NODE_ENV=test mocha --recursive 'lib/**/*.spec.js'",
+    "test": "cross-env NODE_ENV=test mocha --recursive --timeout 15000 'lib/**/*.spec.js'",
     "test:watch": "npm test -- --watch",
     "coverage": "NODE_ENV=test istanbul cover _mocha -- recursive --timeout 15000 'lib/**/*.spec.js'"
   },
