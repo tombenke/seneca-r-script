@@ -1,7 +1,7 @@
 {
   "name": "seneca-r-script",
   "description": "A seneca plugin to run R scripts as child processes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "tags": [
     "seneca",
     "plugin",
