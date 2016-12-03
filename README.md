@@ -4,6 +4,7 @@ A seneca plugin to run R scripts as child processes.
 
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
+[![Coveralls][BadgeCoveralls]][Coveralls]
 
 The plugin is a simple wrapper of the [joshkatz/r-script](https://github.com/joshkatz/r-script) module.
 
@@ -27,7 +28,11 @@ Run the install command:
 
 Run tests:
 
-    $ npm test
+    npm test
+
+To see the coverage, run:
+
+    npm run coverage
 
 ## Usage
 
@@ -105,3 +110,5 @@ by the [kickoff](https://github.com/tombenke/kickoff) utility.
 [npm-url]: https://badge.fury.io/js/seneca-r-script
 [travis-badge]: https://api.travis-ci.org/tombenke/seneca-r-script.svg
 [travis-url]: https://travis-ci.org/tombenke/seneca-r-script
+[Coveralls]: https://coveralls.io/github/tombenke/seneca-r-script?branch=master
+[BadgeCoveralls]: https://coveralls.io/repos/github/tombenke/seneca-r-script/badge.svg?branch=master
