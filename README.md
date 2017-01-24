@@ -46,6 +46,7 @@ The plugin can be activated with the following arguments:
 
 For example this is an asynchronous call to an R script which echoes back the whole data sent to it:
 
+````JavaScript
     const dataToSend = { text: 'some text...', num: 12345, logic: true }
     const optionsToSend = { pretty: true }
     
@@ -55,9 +56,11 @@ For example this is an asynchronous call to an R script which echoes back the wh
             done(err)
         }
     })
+````
  
 and this is an example for a synchronous call:
 
+````JavaScript
     const dataToSend = { text: 'some text...', num: 12345, logic: true }
     seneca.act('role: seneca-r-script, cmd: call, path: echo.spec.R', { data: dataToSend }, function(err, data) {
         if (err === null) {
@@ -65,16 +68,20 @@ and this is an example for a synchronous call:
             done(err)
         }
     })
+````
 
 And this is the echoing R script:
 
+````R
     # This script echoes back the whole data it got from the caller, because
     # the input parameters (whatever they are) arrive into the `input` variable through the environment as a list,
     # and the last statement will be sent back to the caller as a JSON object.
     input
+````
 
 The following code snippet sends a data object with a `pleaseFail: true` property, and expects a `false` response:
 
+````JavaScript
     const dataToFail = { text: 'some text...', num: 12345, pleaseFail: true }
     seneca.act(`role: ${pluginName}, cmd: call, path: ./lib/fail.spec.R`, { data: dataToFail }, function(err, data) {
         if (err === null) {
@@ -82,9 +89,11 @@ The following code snippet sends a data object with a `pleaseFail: true` propert
             done(err)
         }
     })
+````
 
 This R script will give an adequate response to the previous request:
 
+````R
     # This script gets an object, which has a `pleaseFail` boolean property.
     # If this value is `true`, then returns with a boolean `false` value, otherwise returns with `true`.
     result <- TRUE
@@ -93,6 +102,7 @@ This R script will give an adequate response to the previous request:
     }
 
     list(result)
+````
 
 For further details, please study the [joshkatz/r-script](https://github.com/joshkatz/r-script) project.
 
